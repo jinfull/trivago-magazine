@@ -1,8 +1,8 @@
 .featured-image {
-  height: 70vh;
+  height: 65vh;
   width: 100%;
   object-fit: cover;
-  filter: brightness(70%)
+  filter: brightness(60%)
 }
 
 .featured-article-card {
@@ -18,9 +18,9 @@
   z-index: 999;
   margin: 0 auto;
   left: 0;
-  right: 70%;        
+  right: 55%;        
   text-align: center;
-  top: 50%;
+  top: 40%;
   font-family: Arial,sans-serif;
   color: #fff;
   width: 45%;
@@ -44,13 +44,13 @@
 }
 
 #hero-button {
-    display: inline-block;
-    color: #37454d;
-    background-color: #fff;
-    border: 1px solid #697379;
-    padding: 9.5px 18px;
-    border-radius: 2px;
-    font-size: 14px;
-    transition: all .3s linear;
-    font-weight: 700;
+  display: inline-block;
+  color: #37454d;
+  background-color: #fff;
+  border: 1px solid #697379;
+  padding: 9.5px 18px;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: all .3s linear;
+  font-weight: 700;
 }
