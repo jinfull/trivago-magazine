@@ -1,8 +1,10 @@
 import React from 'react';
+
 import './stylesheets/App.css';
 
 import FeaturedArticle from './components/featured';
 import ArticleItem from './components/article_item';
+// import ArticleItemDetail from './components/article_item_detail';
 
 
 class App extends React.Component {
@@ -31,12 +33,14 @@ class App extends React.Component {
     ));
 
     return (
-      <div>
-        <FeaturedArticle featured={featured} />
-        <ul className="articles-ul">
-          {articles}
-        </ul>
-      </div>
+      <>
+        <div>
+          <FeaturedArticle featured={featured} />
+          <ul className="articles-ul">
+            {articles}
+          </ul>
+        </div>
+      </>
     );
   }
 }

@@ -51,47 +51,6 @@ a {
   text-decoration: none;
 }
 
-/*
-  header
-*/
-
-#header {
-  height: 65px;
-  border-bottom: 2px solid rgb(211, 211, 211);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-#sub-header {
-  display: flex;
-  width: 60%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.icon {
-  height: 21px;
-  width: 21px;
-  cursor: pointer;
-}
-
-#hamburger-icon {
-  content: url("../assets/hamburger.png");
-
-}
-#search-icon {
-  content: url("../assets/search.png");
-}
-
-#trivago-logo {
-  content: url("../assets/trivago-logo.png");
-  height: 66px;
-  width: 90px;
-  cursor: pointer;
-}
-
 /* 
 articles-ul
 */
