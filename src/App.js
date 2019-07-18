@@ -1,42 +1,41 @@
-// import React from 'react';
-// import './App.css';
+import React from 'react';
+import './stylesheets/App.css';
 
-// class App extends React.Component {
-  
-
-
-//   render() {
-//     return (
-//       <div>hello</div>
-//     )
-//   }
-// }
-
-// export default App;
+import FeaturedArticle from './components/featured';
+import ArticleItem from './components/article_item';
 
 
-import React, { Component } from 'react';
-//import logo from './logo.svg';
-import './App.css';
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
-    this.state = { articles: [] };
+    this.state = {};
   }
+
   componentDidMount() {
     fetch('http://localhost:3001/')
       .then(response => response.json())
-      .then(data => console.log(data));
-      // .then(data => this.setState({ data }))
-      // .catch(error => alert(error.message));
+      .then(data => this.setState({ data }))
+      .catch(error => alert(error.message));
   }
+
   render() {
+    if (!this.state.data) return null;
+
+    let featured = this.state.data[0];
+
+    let articles = this.state.data.splice(1).map(article => (
+      <ArticleItem
+        article={article}
+        key={article.id}
+      />
+    ));
+
     return (
-      <div className="App">
-        <h1>Users</h1>
-        {/* {this.state.users.map(user =>
-          <div key={user.id}>user: {user.name} Password: {user.password}</div>
-        )} */}
+      <div>
+        <FeaturedArticle featured={featured} />
+        <ul className="articles-ul">
+          {articles}
+        </ul>
       </div>
     );
   }
