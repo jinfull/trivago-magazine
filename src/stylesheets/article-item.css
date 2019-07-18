@@ -47,11 +47,11 @@
   color: #697379;
 }
 
-.article-item:hover {
-  -webkit-transform: scale(1.02, 1.02);
-  transform: scale(1.02, 1.02);
+.article-item {
+  transition: box-shadow .3s;
+  border-radius:10px;
+  border: 1px solid #ccc;
 }
-
-.article-item:hover::after {
-  opacity: 1;
+.article-item:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.4); 
 }
