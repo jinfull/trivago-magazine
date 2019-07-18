@@ -31,16 +31,20 @@
 #featured-loc {
   font-size: 20px;
   justify-content: flex-start;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   font-weight: 600;
 }
 
 #featured-title {
   font-size: 44px;
   word-wrap: normal;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   font-weight: 600;
   line-height:1.25;
+}
+
+#featured-excerpt {
+  margin-bottom: 26.5px;
 }
 
 #hero-button {

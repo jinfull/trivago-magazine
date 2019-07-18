@@ -11,6 +11,7 @@ class FeaturedArticle extends React.Component {
         <div className='overview-text'>
           <div id='featured-loc'>{featured.taxonomies.destinations[0].name.toUpperCase()}</div>
           <div id='featured-title'>{featured.card_title}</div>
+          <div id='featured-excerpt'>{featured.excerpt}</div>
           <div id='hero-button'>Read More</div>
         </div>
       </a>

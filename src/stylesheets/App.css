@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*
   header
 */
@@ -86,4 +90,17 @@ table {
   height: 66px;
   width: 90px;
   cursor: pointer;
+}
+
+/* 
+articles-ul
+*/
+
+.articles-ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
 }
