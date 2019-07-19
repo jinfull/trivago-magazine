@@ -4,8 +4,6 @@ import './stylesheets/App.css';
 
 import FeaturedArticle from './components/featured';
 import ArticleItem from './components/article_item';
-// import ArticleItemDetail from './components/article_item_detail';
-
 
 class App extends React.Component {
   constructor() {
@@ -24,8 +22,6 @@ class App extends React.Component {
     if (!this.state.data) return null;
 
     let featured = this.state.data[0];
-
-    console.log(this.state.data)
 
     let articles = this.state.data.slice(1).map(article => (
       <ArticleItem

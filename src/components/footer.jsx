@@ -7,7 +7,7 @@ class Footer extends React.Component {
     return (
       <div id="footer">
         {/* <div id="sub-footer"> */}
-          <img id='footer-logo' src={trivago}></img>
+          <img id='footer-logo' src={trivago} alt='trivago' />
           <div id='copyright'>
             Copyright © 2019 trivago | All rights reserved.
           </div>

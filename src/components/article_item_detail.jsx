@@ -42,7 +42,7 @@ class ArticleItemDetail extends React.Component {
 
     return (
       <>
-        <img className='featured-image' id='article-featured-image' src={article.thumbnail_url}></img>
+        <img className='featured-image' id='article-featured-image' src={article.thumbnail_url} alt='featured'></img>
         <div className='detail-container'>
           <div className='article-details'>
             <div className='article-detail-loc'>{article.taxonomies.destinations[0].name.toUpperCase()}</div>
@@ -52,7 +52,7 @@ class ArticleItemDetail extends React.Component {
           </div>
           <div className='article-side'>
             <div className='author'>
-              <img className='author-avatar' src={article.author.image} />
+              <img className='author-avatar' src={article.author.image} featured='author avatar' />
               <div className='author-text'>
                 <div className='author-title'>{article.author.name}</div>
                 <div className='publish-date'>{article.date}</div>
