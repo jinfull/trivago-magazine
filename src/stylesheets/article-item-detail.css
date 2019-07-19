@@ -38,6 +38,7 @@
 .author {
   display: flex;
   flex-direction: row;
+  margin-bottom: 36px;
 }
 
 .author-text {
@@ -48,7 +49,6 @@
   align-content: center;
   margin-left: 15px;
   color: #475760;
-
 }
 
 .author-avatar {
@@ -62,3 +62,6 @@
   font-weight: 700;
 }
 
+.rating {
+  margin-bottom: 36px;
+}

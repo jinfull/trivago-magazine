@@ -18,8 +18,6 @@ class ArticleItemDetail extends React.Component {
   render() {
     if (!this.state.data) return null;
 
-    console.log(this.state.data);
-
     let article = this.state.data;
 
     return (
@@ -38,9 +36,10 @@ class ArticleItemDetail extends React.Component {
               <div className='author-text'>
                 <div className='author-title'>{article.author.name}</div>
                 <div className='publish-date'>{article.date}</div>
-                <div>RATING MECHANISM HERE</div>
               </div>
             </div>
+            <div className='rating'>RATING MECHANISM HERE</div>
+            <div className='hotels'>hotels here</div>
           </div>
         </div>
       </>
