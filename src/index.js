@@ -6,6 +6,7 @@ import './stylesheets/index.css';
 import App from './App';
 import ArticleItemDetail from './components/article_item_detail';
 import Header from './components/header';
+import Footer from './components/footer';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -16,6 +17,7 @@ const routing = (
       <Route path="/articles/:id" component={ArticleItemDetail} />
       <Route exact path="/" component={App} />
     </Switch>
+    <Route component= {Footer} />
   </Router>
 )
 

@@ -19,6 +19,8 @@
   transition: all .5s;
   margin-bottom: 20px;
   object-fit: cover;
+  border-radius: 4px;
+
 }
 
 .article-text {

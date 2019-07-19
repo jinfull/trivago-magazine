@@ -1,0 +1,28 @@
+#footer {
+  height: 140px;
+  background-color: #323232; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sub-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  align-content: center;
+  height: inherit;
+}
+
+#footer-logo {
+  height: 60px;
+  width: 105px;
+  padding-bottom: 5px;
+}
+
+#copyright {
+  font-family: Arial,sans-serif;
+  color: #9ba2a6;
+  font-size: 12px;
+}
