@@ -9,8 +9,10 @@ class ArticleItemDetail extends React.Component {
 
   componentDidMount() {
     let uri = this.props.location.state.article.uri;
+    console.log(uri);
 
-    fetch(`${uri}`)
+    fetch('https://cors-anywhere.herokuapp.com/' + `${uri}`)
+    // fetch(`${uri}`)
       .then(response => response.json())
       .then(data => this.setState({ data }));
   }

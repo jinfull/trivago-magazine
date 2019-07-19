@@ -25,6 +25,8 @@ class App extends React.Component {
 
     let featured = this.state.data[0];
 
+    console.log(this.state.data)
+
     let articles = this.state.data.slice(1).map(article => (
       <ArticleItem
         article={article}
