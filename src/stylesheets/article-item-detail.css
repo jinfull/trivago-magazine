@@ -73,3 +73,7 @@
 .rating {
   margin-bottom: 36px;
 }
+
+#article-featured-image {
+    filter: brightness(100%)
+}

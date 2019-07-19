@@ -1,5 +1,4 @@
 import React from 'react';
-import Parser from 'html-react-parser';
 import '../stylesheets/article-item-detail.css';
 
 class ArticleItemDetail extends React.Component {
@@ -43,7 +42,7 @@ class ArticleItemDetail extends React.Component {
 
     return (
       <>
-        <img className='featured-image' src={article.thumbnail_url}></img>
+        <img className='featured-image' id='article-featured-image' src={article.thumbnail_url}></img>
         <div className='detail-container'>
           <div className='article-details'>
             <div className='article-detail-loc'>{article.taxonomies.destinations[0].name.toUpperCase()}</div>
