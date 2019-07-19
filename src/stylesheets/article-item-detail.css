@@ -78,3 +78,7 @@
 #article-featured-image {
     filter: brightness(100%)
 }
+
+.article-side {
+  margin-top: 48px;
+}

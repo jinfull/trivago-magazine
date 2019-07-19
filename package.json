@@ -7,6 +7,7 @@
     "html-react-parser": "^0.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-ratings-declarative": "^3.4.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "request": "^2.88.0"

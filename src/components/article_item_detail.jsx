@@ -1,5 +1,6 @@
 import React from 'react';
 import '../stylesheets/article-item-detail.css';
+import RatingsBar from './ratings_bar';
 
 class ArticleItemDetail extends React.Component {
   constructor() {
@@ -38,8 +39,6 @@ class ArticleItemDetail extends React.Component {
       )
     }
 
-    // $.parseHTML(article['content'][0]['text'])
-
     return (
       <>
         <img className='featured-image' id='article-featured-image' src={article.thumbnail_url} alt='featured'></img>
@@ -58,7 +57,8 @@ class ArticleItemDetail extends React.Component {
                 <div className='publish-date'>{article.date}</div>
               </div>
             </div>
-            <div className='rating'>RATING MECHANISM HERE</div>
+            <div className='hotels'>Rate this article!</div>
+            <RatingsBar />
             <div className='hotels'>Featured hotels</div>
             <ul className='hotel-ul'>
               {hotels}
