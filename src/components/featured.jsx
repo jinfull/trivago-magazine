@@ -4,21 +4,21 @@ import '../stylesheets/featured.css';
 
 class FeaturedArticle extends React.Component {
   render() {
-    let featured = this.props.featured;
+    let article = this.props.article;
 
     return (
       <div className='featured-article-card'>
         <Link to={{
-          pathname: `/articles/${featured.id}`,
+          pathname: `/articles/${article.id}`,
           state: {
-            article: featured
+            article: article
           }
         }}>
-          <img className='featured-image' src={featured.thumbnail_url} alt='featured cover' />
+          <img className='featured-image' src={article.thumbnail_url} alt='featured cover' />
           <div className='overview-text'>
-            <div id='featured-loc'>{featured.taxonomies.destinations[0].name.toUpperCase()}</div>
-            <div id='featured-title'>{featured.card_title}</div>
-            <div id='featured-excerpt'>{featured.excerpt}</div>
+            <div id='featured-loc'>{article.taxonomies.destinations[0].name.toUpperCase()}</div>
+            <div id='featured-title'>{article.card_title}</div>
+            <div id='featured-excerpt'>{article.excerpt}</div>
             <div id='hero-button'>Read More</div>
           </div>
         </Link>

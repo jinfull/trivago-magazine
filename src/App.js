@@ -25,7 +25,7 @@ class App extends React.Component {
 
     let featured = this.state.data[0];
 
-    let articles = this.state.data.splice(1).map(article => (
+    let articles = this.state.data.slice(1).map(article => (
       <ArticleItem
         article={article}
         key={article.id}
@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <>
         <div>
-          <FeaturedArticle featured={featured} />
+          <FeaturedArticle article={featured} />
           <ul className="articles-ul">
             {articles}
           </ul>
