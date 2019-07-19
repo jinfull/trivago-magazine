@@ -20,6 +20,22 @@ class ArticleItemDetail extends React.Component {
 
     let article = this.state.data;
 
+    let hotels = article.content.filter(hotelObject => {
+      if (hotelObject.type === 'hotel_module') {
+        return hotelObject['hotel'];
+      }
+    });
+
+    for (let i = 0; i < hotels.length; i++) {
+      hotels[i] = (
+        <a href={hotels[i]['hotel']['url']} target='_blank'>
+          <li className='hotel-li' key={hotels[i]['hotel']['id']}>
+            {i + 1}. {hotels[i]['hotel']['name']}
+          </li>
+        </a>
+      )
+    }
+
     return (
       <>
         <img className='featured-image' src={article.thumbnail_url}></img>
@@ -39,7 +55,10 @@ class ArticleItemDetail extends React.Component {
               </div>
             </div>
             <div className='rating'>RATING MECHANISM HERE</div>
-            <div className='hotels'>hotels here</div>
+            <div className='hotels'>Featured hotels</div>
+            <ul className='hotel-ul'>
+              {hotels}
+            </ul>
           </div>
         </div>
       </>

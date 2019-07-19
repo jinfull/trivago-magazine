@@ -1,14 +1,14 @@
 .detail-container {
     padding: 0 20px;
-    margin: 64px 128px;
+    margin: 64px 200px;
     font-family: Arial,sans-serif;
     display: flex;
     flex-direction: row;
 }
 
 .article-details {
-  width: 80%;
-  margin-right: 36px;
+  width: 60%;
+  margin-right: 80px;
 }
 
 .article-detail-loc {

@@ -55,3 +55,17 @@
 .article-item:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.4); 
 }
+
+.hotels {
+  font-size: 14px;
+  font-weight: 700;
+  color: #37454d;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.hotel-li {
+  line-height: 2;
+  color: #3f9fc1;
+  font-size: 12px;
+}
