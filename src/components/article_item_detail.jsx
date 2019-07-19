@@ -1,4 +1,5 @@
 import React from 'react';
+import Parser from 'html-react-parser';
 import '../stylesheets/article-item-detail.css';
 
 class ArticleItemDetail extends React.Component {
@@ -38,6 +39,8 @@ class ArticleItemDetail extends React.Component {
       )
     }
 
+    // $.parseHTML(article['content'][0]['text'])
+
     return (
       <>
         <img className='featured-image' src={article.thumbnail_url}></img>
@@ -45,8 +48,8 @@ class ArticleItemDetail extends React.Component {
           <div className='article-details'>
             <div className='article-detail-loc'>{article.taxonomies.destinations[0].name.toUpperCase()}</div>
             <div className='article-detail-title'>{article.title}</div>
-            {/* <div className='article-detail-text' dangerouslySetInnerHTML={{ __html: article['content'][0]['text'] }} /> */}
-            <div className='article-detail-text'>{article['content'][0]['text']}</div>
+            <div className='article-detail-text' dangerouslySetInnerHTML={{ __html: article['content'][0]['text'] }} />
+            {/* <div className='article-detail-text' enctype='html/text'>{article['content'][0]['text']}</div> */}
           </div>
           <div className='article-side'>
             <div className='author'>
