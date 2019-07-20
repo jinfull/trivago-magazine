@@ -1,6 +1,7 @@
 import React from 'react';
 import '../stylesheets/article-item-detail.css';
 import RatingsBar from './ratings_bar';
+// import console = require('console');
 
 class ArticleItemDetail extends React.Component {
   constructor() {
@@ -21,6 +22,7 @@ class ArticleItemDetail extends React.Component {
     if (!this.state.data) return null;
 
     let article = this.state.data;
+    console.log(article);
 
     let hotels = article.content.filter(hotelObject => {
       if (hotelObject.type === 'hotel_module') {
@@ -57,7 +59,7 @@ class ArticleItemDetail extends React.Component {
               </div>
             </div>
             <div className='hotels'>Rate this article!</div>
-            <RatingsBar />
+            <RatingsBar articleId={article.id} />
             <div className='hotels'>Featured hotels</div>
             <ul className='hotel-ul'>
               {hotels}

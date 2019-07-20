@@ -1,21 +1,3 @@
-// const express = require('express');
-// const bodyParser = require('body-parser');
-// const pino = require('express-pino-logger')();
-
-// const app = express();
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(pino);
-
-// app.get('/api/greeting', (req, res) => {
-//   const name = req.query.name || 'World';
-//   res.setHeader('Content-Type', 'application/json');
-//   res.send(JSON.stringify({ greeting: `Hello ${name}!` }));
-// });
-
-// app.listen(3001, () =>
-//   console.log('Express server is running on localhost:3001')
-// );
-
 const express = require('express');
 const request = require('request');
 
@@ -41,3 +23,33 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
+
+// sql implementation
+
+// const sqlite3 = require('sqlite3').verbose();
+// const path = require('path');
+// const dbPath = path.resolve(__dirname, 'database.db');
+
+// const db = new sqlite3.Database(dbPath, (err) => {
+//   if (err) {
+//     console.error(err.message);
+//   }
+//   console.log('Connected to the ratings database.');
+// });
+
+// db.serialize(() => {
+//   db.run(`CREATE TABLE IF NOT EXISTS ratings (
+//             article_id NUMBER PRIMARY KEY,
+//             rating NUMBER);`, (err) => {
+//       if (err) {
+//         console.error(err.message);
+//       }
+//     });
+// });
+
+// db.close((err) => {
+//   if (err) {
+//     console.error(err.message);
+//   }
+//   console.log('Close the database connection.');
+// });
