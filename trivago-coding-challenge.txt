@@ -1,0 +1,30 @@
+1)
+
+This application was built using a Node.js/Express backend and a React frontend with Firebase as the database.
+
+Node.js and Express were chosen for ease of use to create a simple server to route the mock API endpoint through. The mock API was passed through this backend to be able to read and access the endpoints (CORS), then distributed through React components. 
+
+In the frontend, app.js acts as the landing page, and is composed of a "featured" article component, and remaining article card components. Clicking on any article will route the user to the ArticleItemDetail component which will display further information of that article with the URI specified in the content endpoint.
+
+Header and footer components are displayed on every page of the application.
+
+For article ratings, Firebase was chosen as a simple NoSQL database with extensive documentation. For the purposes of this challenge, ratings are collected and written to the database without being rendered in the application.
+
+
+2)
+
+To improve search engine crawling, here are a few things to consider in my application:
+
+- Improving page load speed will increase website ranking as well as indirectly improving dwell time.
+
+- Interlinking of old articles with new articles. When new articles are generated, link back to the older articles to improve crawling of deeper, hidden pages of the application.
+
+- Including alt attributes to all img tags will help search engines index images properly (web crawlers are unable to read images)
+
+- Using HTTPS over HTTP (Google "Not Secure" warnings lead to higher bounce rates)
+
+- Optimizing for mobile (i.e. page load speeds on mobile)
+
+- Adding a sitemap to improve the crawling of the site (priority, changefreq, and lastmod attributes)
+
+- robots.txt to limit crawl rate on your site
