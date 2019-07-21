@@ -1,1 +1,12 @@
 version: "2"
+services:    
+  client:        
+    image: jinfull/trivago-magazine
+    restart: always        
+    ports:            
+      - "3000:3000"        
+  server:        
+    image: jinfull/trivago-magazine-server
+    restart: always        
+    ports:            
+      - "3001:3001"        
