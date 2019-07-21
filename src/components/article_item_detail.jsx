@@ -1,7 +1,6 @@
 import React from 'react';
 import '../stylesheets/article-item-detail.css';
 import RatingsBar from './ratings_bar';
-// import console = require('console');
 
 class ArticleItemDetail extends React.Component {
   constructor() {
@@ -12,8 +11,8 @@ class ArticleItemDetail extends React.Component {
   componentDidMount() {
     let uri = this.props.location.state.article.uri;
 
-    fetch('https://cors-anywhere.herokuapp.com/' + `${uri}`)
-    // fetch(`${uri}`)
+    // fetch('https://cors-anywhere.herokuapp.com/' + `${uri}`)
+    fetch(`${uri}`)
       .then(response => response.json())
       .then(data => this.setState({ data }));
   }
@@ -22,7 +21,6 @@ class ArticleItemDetail extends React.Component {
     if (!this.state.data) return null;
 
     let article = this.state.data;
-    console.log(article);
 
     let hotels = article.content.filter(hotelObject => {
       if (hotelObject.type === 'hotel_module') {
@@ -32,7 +30,7 @@ class ArticleItemDetail extends React.Component {
 
     for (let i = 0; i < hotels.length; i++) {
       hotels[i] = (
-        <a href={hotels[i]['hotel']['url']} target='_blank'>
+        <a href={hotels[i]['hotel']['url']} key={hotels[i]['hotel']['id']} target='_blank' rel="noopener noreferrer">
           <li className='hotel-li' key={hotels[i]['hotel']['id']}>
             {i + 1}. {hotels[i]['hotel']['name']}
           </li>
@@ -52,13 +50,12 @@ class ArticleItemDetail extends React.Component {
           </div>
           <div className='article-side'>
             <div className='author'>
-              <img className='author-avatar' src={article.author.image} featured='author avatar' />
+              <img className='author-avatar' src={article.author.image} alt='author avatar' />
               <div className='author-text'>
                 <div className='author-title'>{article.author.name}</div>
                 <div className='publish-date'>{article.date}</div>
               </div>
             </div>
-            <div className='hotels'>Rate this article!</div>
             <RatingsBar articleId={article.id} />
             <div className='hotels'>Featured hotels</div>
             <ul className='hotel-ul'>

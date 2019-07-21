@@ -7,7 +7,7 @@ class Header extends React.Component {
       <div id="header">
         <div id="sub-header">
           <img className='icon' id='hamburger-icon' alt='menu icon'></img>
-          <a href='/' id='trivago-logo'></a>
+          <a href='/' id='trivago-logo' />
           <img className='icon' id='search-icon' alt='search icon'></img>
         </div>
       </div>
